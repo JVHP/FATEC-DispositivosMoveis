@@ -42,8 +42,11 @@ class MainActivity : AppCompatActivity() {
                         result = "Melhor utilizar a Gasolina"
                     }
 
+                } ?:run {
+                    result = "Não deixe o campo Gasolina vazio"
                 }
-
+            } ?:run {
+                result = "Não deixe o campo Álcool vazio"
             }
             rsltCalc.text = result //Coloca o resultado em string no componente de texto do app
 
