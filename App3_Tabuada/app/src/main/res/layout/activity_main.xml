@@ -55,7 +55,7 @@
     <EditText
             android:layout_width="277dp"
             android:layout_height="41dp"
-            android:inputType="number|textPersonName"
+            android:inputType="number"
             android:ems="10"
             android:id="@+id/nTabuada"
             app:layout_constraintTop_toTopOf="@+id/txtTitulo"
