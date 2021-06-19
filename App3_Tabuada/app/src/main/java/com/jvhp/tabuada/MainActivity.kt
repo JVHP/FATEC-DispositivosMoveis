@@ -26,7 +26,7 @@ class MainActivity : AppCompatActivity() {
 
             texto.setText("A tabuada de $numeroSorteado é")
             for (i in (1..10)) {
-                result = result + "$numeroSorteado" + "X" + i + " = " + (numeroSorteado * i) + "\n"
+                result = result + "$numeroSorteado" + " x " + i + " = " + (numeroSorteado * i) + "\n"
             }
             Resultado.setText("$result")
         }
