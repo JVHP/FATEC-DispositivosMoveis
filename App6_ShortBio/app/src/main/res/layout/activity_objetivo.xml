@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".Objetivo">
+    <TextView
+            android:id="@+id/txtObjetivo"
+            android:layout_width="284dp"
+            android:layout_height="86dp"
+            android:text="Meu objetivo é sempre buscar avançar,
+            custe oque custar TATAKAE"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toTopOf="@+id/btnVoltar"
+            app:layout_constraintTop_toBottomOf="@+id/imageView5"
+            android:textAlignment="center" app:layout_constraintHorizontal_bias="0.496"/>
+    <Button
+            android:id="@+id/btnVoltar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Voltar"
+            app:layout_constraintTop_toBottomOf="@+id/txtObjetivo"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+    />
+    <ImageView
+            android:layout_width="147dp"
+            android:layout_height="96dp" app:srcCompat="@android:drawable/ic_menu_mapmode"
+            android:id="@+id/imageView5"
+            app:layout_constraintStart_toStartOf="parent" app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" android:layout_marginTop="108dp"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

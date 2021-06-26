@@ -1,0 +1,24 @@
+package com.jvhp.app6_shortbio
+
+import android.content.Intent
+import androidx.appcompat.app.AppCompatActivity
+import android.os.Bundle
+import android.widget.Button
+
+class Objetivo : AppCompatActivity() {
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setContentView(R.layout.activity_objetivo)
+        lateinit var btnVoltar: Button
+
+        btnVoltar = findViewById(R.id.btnVoltar)
+
+        btnVoltar.setOnClickListener {
+            val Voltar4 = Intent(
+                this@Objetivo,
+                MainActivity::class.java
+            )
+            startActivity(Voltar4)
+        }
+    }
+}
