@@ -45,7 +45,7 @@ class MainActivity : AppCompatActivity() {
             else{
                 texto.setText("A tabuada de $numeroTab é")
                 for (i in (1..10)) {
-                    result += "$numeroTab" + "X" + i + " = " + (numeroTab * i) + "\n"
+                    result += "$numeroTab" + " x " + i + " = " + (numeroTab * i) + "\n"
                 }
                 Resultado.setText("$result")
             }
