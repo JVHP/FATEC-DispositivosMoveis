@@ -25,3 +25,7 @@
 ![18](https://user-images.githubusercontent.com/63752069/125173991-9d950600-e198-11eb-9af6-d5968ee7773d.png)
 ![19](https://user-images.githubusercontent.com/63752069/125173992-9d950600-e198-11eb-9b85-ce5c0e4816e0.png)
 ![20](https://user-images.githubusercontent.com/63752069/125173993-9e2d9c80-e198-11eb-9092-7c856fdbed4a.png)
+
+**Total de Apps:**
+
+![total](https://user-images.githubusercontent.com/63752069/125174044-f795cb80-e198-11eb-8c8e-a07c2948c98e.png)
