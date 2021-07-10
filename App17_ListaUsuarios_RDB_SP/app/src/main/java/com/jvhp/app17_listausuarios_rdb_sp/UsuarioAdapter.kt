@@ -11,7 +11,7 @@ class UsuarioAdapter(
     RecyclerView.Adapter<UsuarioAdapter.ItemViewHolder>() {
 
     class ItemViewHolder(view: View): RecyclerView.ViewHolder(view){
-        /*val imgFoto: ImageView = view.findViewById(R.id.imgFoto)*/
+        val imgFoto: ImageView = view.findViewById(R.id.imgFoto)
         val txtNome: TextView = view.findViewById(R.id.txtNome)
         val txtEmail: TextView = view.findViewById(R.id.txtEmail)
         val txtStack: TextView = view.findViewById(R.id.txtStack)
@@ -29,9 +29,9 @@ class UsuarioAdapter(
 
     override fun onBindViewHolder(holder: ItemViewHolder, position: Int){
 
-        /*listaUsuario[position].foto?.let{
+        listaUsuario[position].foto?.let{
             holder.imgFoto.setImageBitmap(it)
-        }*/
+        }
 
         holder.txtNome.text = listaUsuario[position].nome
         holder.txtEmail.text = listaUsuario[position].email

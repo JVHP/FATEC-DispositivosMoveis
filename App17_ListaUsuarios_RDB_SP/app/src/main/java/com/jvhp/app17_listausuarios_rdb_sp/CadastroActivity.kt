@@ -22,8 +22,8 @@ class CadastroActivity : AppCompatActivity(),
     lateinit var edtNome: EditText
     lateinit var edtEmail: EditText
     lateinit var btnSalvar: Button
-    /*lateinit var imvFoto: ImageView
-    var fotoTirada: Bitmap?=null*/
+    lateinit var imvFoto: ImageView
+    var fotoTirada: Bitmap?=null
     lateinit var swtEmpregado: Switch
     lateinit var prefenciasUsuario: SharedPreferences
     var db: AppDatabase? = null
@@ -40,15 +40,15 @@ class CadastroActivity : AppCompatActivity(),
         edtEmail = findViewById(R.id.edtEmail)
         spnSenioridade = findViewById(R.id.spnSenioridade)
         btnSalvar = findViewById(R.id.btnSalvar)
-        /*imvFoto = findViewById(R.id.imvFoto)*/
+        imvFoto = findViewById(R.id.imvFoto)
         swtEmpregado = findViewById(R.id.swtEmpregado)
 
-        /*imvFoto.setOnClickListener() {
+        imvFoto.setOnClickListener() {
             val intent = Intent(MediaStore.ACTION_IMAGE_CAPTURE)
 
             if (intent.resolveActivity(packageManager) != null)
                 startActivityForResult(intent, RC_CAMERA)
-        }*/
+        }
 
         ArrayAdapter.createFromResource(this, R.array.opcoes_spinner,
         android.R.layout.simple_spinner_item).also {arrayAdapter ->
@@ -65,7 +65,7 @@ class CadastroActivity : AppCompatActivity(),
                     adicionarUsuario(
                         edtNome.text.toString(),
                         edtEmail.text.toString(),
-                        /*fotoTirada,*/
+                        fotoTirada,
                         stack,
                         senioridade,
                         swtEmpregado.isChecked()
@@ -113,12 +113,12 @@ class CadastroActivity : AppCompatActivity(),
         TODO("Not yet implemented")
     }
 
-    fun adicionarUsuario(nome: String, email: String, /*foto: Bitmap?,*/ stack: Stack, senioridade: Senioridade, empregado: Boolean) {
+    fun adicionarUsuario(nome: String, email: String, foto: Bitmap?, stack: Stack, senioridade: Senioridade, empregado: Boolean) {
         CoroutineScope(Dispatchers.IO).launch {
             db = DatabaseBuilder.getAppDatabase(this@CadastroActivity)
 
             db?.usuarioDao()?.addUsuario(Usuario(
-                /*foto = foto,*/
+                foto = foto,
                 nome = nome,
                 email = email,
                 stack = stack,
@@ -139,14 +139,14 @@ class CadastroActivity : AppCompatActivity(),
         }
     }
 
-    /*override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
+    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         super.onActivityResult(requestCode, resultCode, data)
 
         if((resultCode == RESULT_OK) && (requestCode == RC_CAMERA)){
             fotoTirada = data?.extras?.get("data") as Bitmap
             imvFoto.setImageBitmap(fotoTirada)
         }
-    }*/
+    }
 
     override fun onPause() {
         super.onPause()
@@ -167,10 +167,10 @@ class CadastroActivity : AppCompatActivity(),
 
         edtNome.setText(prefenciasUsuario.getString("NOME", null))
     }
-/*
+
     companion object{
         const val RC_CAMERA  = 12345
         const val RC_GALERIA = 67890
     }
-*/
+
 }

@@ -9,8 +9,8 @@ import com.jvhp.app17_listausuarios_rdb_sp.Stack
 data class Usuario(
     @PrimaryKey(autoGenerate = true)
     var id: Int = 0,
-    /*@ColumnInfo(name = "Foto")
-    var foto: Bitmap? = null,*/
+    @ColumnInfo(name = "Foto")
+    var foto: Bitmap? = null,
     @ColumnInfo(name = "Nome")
     var nome: String,
     @ColumnInfo(name = "Email")
