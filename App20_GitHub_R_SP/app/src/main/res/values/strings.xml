@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">Aplicativo 20 - Buscar Usuario GitHub com API</string>
+    <string name="edtHintLogin">Digite um nome de Usuário do GitHub</string>
+</resources>
